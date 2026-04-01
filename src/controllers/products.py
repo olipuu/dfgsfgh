@@ -30,7 +30,7 @@ def _load_recipes() -> List[dict]:
 
     if not DATA_FILE.exists():
         return []
-    with DATA_FILE.open("r", encoding="utf-8") as f:
+    with DATA_FILE.open("r", encoding="utf-8-sig") as f:
         return json.load(f)
 
 
